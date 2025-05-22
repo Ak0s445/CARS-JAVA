@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.MainController">
+   <children>
+      <TableView fx:id="carTable" layoutX="99.0" layoutY="100.0" onMouseClicked="#onMouseClickedCarTable" prefHeight="200.0" prefWidth="379.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="plateCol" prefWidth="75.0" text="Rendszám" />
+            <TableColumn fx:id="yearCol" prefWidth="75.0" text="Évjárat" />
+            <TableColumn fx:id="brandCol" prefWidth="75.0" text="Márka" />
+            <TableColumn fx:id="priceCol" prefWidth="75.0" text="Ár" />
+        </columns>
+      </TableView>
+      <TextField fx:id="idField" editable="false" layoutX="99.0" layoutY="318.0" prefHeight="25.0" prefWidth="57.0" />
+      <TextField fx:id="plateField" layoutX="181.0" layoutY="318.0" prefHeight="25.0" prefWidth="57.0" />
+      <TextField fx:id="yearField" layoutX="263.0" layoutY="318.0" prefHeight="25.0" prefWidth="57.0" />
+      <TextField fx:id="brandField" layoutX="345.0" layoutY="318.0" prefHeight="25.0" prefWidth="57.0" />
+      <TextField fx:id="priceField" layoutX="421.0" layoutY="318.0" prefHeight="25.0" prefWidth="57.0" />
+      <Label layoutX="114.0" layoutY="300.0" text="ID" />
+      <Label layoutX="196.0" layoutY="300.0" text="Rendszám" />
+      <Label layoutX="275.0" layoutY="300.0" text="Évjárat" />
+      <Label layoutX="360.0" layoutY="300.0" text="Márka" />
+      <Label layoutX="436.0" layoutY="300.0" text="Ár" />
+      <Button layoutX="130.0" layoutY="361.0" mnemonicParsing="false" onAction="#onClickAddButton" text="Hozzáad" />
+      <Button layoutX="249.0" layoutY="361.0" mnemonicParsing="false" onAction="#onClickModifyButton" text="Módosít" />
+      <Button layoutX="374.0" layoutY="361.0" mnemonicParsing="false" onAction="#onClickDeleteButton" text="Töröl" />
+      <Button layoutX="512.0" layoutY="343.0" mnemonicParsing="false" onAction="#onClickSaveButton" text="Mentés" />
+   </children>
+</Pane>
