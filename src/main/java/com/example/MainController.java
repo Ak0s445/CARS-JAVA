@@ -1,7 +1,6 @@
 package com.example;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 import javafx.event.ActionEvent;
@@ -66,12 +65,12 @@ public class MainController {
         brandCol.setCellValueFactory(new PropertyValueFactory<>("brand"));
         priceCol.setCellValueFactory(new PropertyValueFactory<>("price"));
 
-        List<Car> carList = new ArrayList<>();
-        carList.add(new Car(1, "ABC-123", 2020, "BMW", 1000000)); //kocsi hozzáadása
-         carList.add(new Car(2, "BGE-456", 2020, "Skoda", 150000));
-         carList.add(new Car(3, "CPG-789", 2020, "Chevrolet", 10000000));
+        //  List<Car> carList = new ArrayList<>();
+        //  carList.add(new Car(1, "ABC-123", 2020, "BMW", 1000000)); //kocsi hozzáadása
+        //  carList.add(new Car(2, "BGE-456", 2020, "Skoda", 150000));
+        //   carList.add(new Car(3, "CPG-789", 2020, "Chevrolet", 10000000));
 
-        carTable.getItems().addAll(carList);
+        carTable.getItems().addAll(Storage.readFile());
     }
 
 
@@ -159,7 +158,9 @@ public class MainController {
     }
     private void startSave(){
         ArrayList<Car> carList = new ArrayList<>(carTable.getItems());
-        
+        Storage.writeFile(carList);
+
+
     }
 
     @FXML
